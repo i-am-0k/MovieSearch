@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSearch</title>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Movie">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style3.css">
+</head>
+<body>
+    <div class="test">
+        <div class="background_background__3Oeal">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="page">
+        <header class="head">
+            <div class="logo">
+                <img class="logo__img" src="./images/camera.svg" alt="camera">
+                <h1 class="logo__title">MovieSearch</h1>
+            </div>
+            <div class="account">
+                <img class="account__img" src="./images/user.svg" alt="user">
+                <button class="account__btn">User</button>
+            </div>
+        </header>
+        <main class="main">
+            <form class="form" name="formSearch">
+                <h2 class="form__title">Search:</h2>
+                <label class="form__label">
+                    Title:
+                    <input type="text" class="form__input" name="title">
+                </label>
+                <label class="form__label">
+                    Type:
+                    <select class="form__select" name="type" id="type-select">
+                        <option class="form__option" value="movie">Movie</option>
+                        <option class="form__option" value="series">Series</option>
+                        <option class="form__option" value="episode">Episode</option>
+                    </select>
+                </label>
+                <button class="btn">Search</button>
+            </form>
+            <div class="search">
+                <div class="search__box"></div>
+                <div class="search__page"></div>
+                <div class="details" id="info"></div>
+            </div>
+            <section class="recom">
+                <h2 class="recom__title">Based on your interests</h2>
+                <div class="recom__box"></div>
+            </section>
+        </main>
+        <dialog class="modal">
+            <div class="modal__block">
+                <h2 class="modal__title">User Info:</h2>
+                <div class="modal__box"></div>
+                <button class="btn" data-closeModal>Close</button>
+            </div>
+        </dialog>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCj6784z5X3xljJlG4YUpu3RIJcuMeDM6U",
+            authDomain: "moviesearch-666.firebaseapp.com",
+            projectId: "moviesearch-666",
+            storageBucket: "moviesearch-666.firebasestorage.app",
+            messagingSenderId: "191927802150",
+            appId: "1:191927802150:web:6466797f61064fd9bd09e7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="./script1.js"></script>
+</body>
+</html>

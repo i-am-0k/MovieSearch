@@ -1,0 +1,218 @@
+
+/* ==================================sign================================== */
+
+.sign {
+    width: 1200px;
+    height: 690px;
+    display: flex;
+    position: absolute;
+    align-self: center;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    border-radius: 22px;
+}
+
+/* ==================================info================================== */
+
+.info {
+    background-color: #0c092a;
+    background-image: url(./images/paint.jpg);
+    background-size: cover;
+    width: 600px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 3;
+}
+.info__title {
+    color: #ececec;
+    font-size: 30px;
+    font-weight: 600;
+}
+.info__btn {
+    font-size: 24px;
+    background-color: #ececec;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: #301942;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+.info__btn:hover {
+    color: #ececec;
+    background-color: #301942;
+}
+.sign__container {
+    position: absolute;
+    top: 0;
+    left: 600px;
+    width: 600px;
+    height: 690px;
+}
+
+/* ==================================form================================== */
+
+.form {
+    position: absolute;
+    height: 690px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px 80px;
+    justify-content: center;
+    animation: hidden 0s 0.3s both;
+}
+.active {
+    animation: show 0s 0.3s both;
+}
+.start-left {
+    animation: start-left 1s both;
+}
+.start-right {
+    animation: start-right 1s both;
+}
+.left-start {
+    animation: left-start 1s both;
+}
+.right-start {
+    animation: right-start 1s both;
+}
+@keyframes start-left {
+    100% {
+        translate: -600px 0;
+    }
+}
+@keyframes start-right {
+    100% {
+        translate: 600px 0;
+    }
+}
+@keyframes left-start {
+    0% {
+        translate: -600px 0;
+    }
+    100% {
+        translate: 0px 0;
+    }
+}
+@keyframes right-start {
+    0% {
+        translate: 600px 0;
+    }
+    100% {
+        translate: 0px 0;
+    }
+}
+@keyframes hidden {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+    100% {
+        scale: 0;
+        opacity: 0;
+    }
+}
+@keyframes show {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+.form__title {
+    align-self: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #301942;
+}
+.form__label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    color: #0c092a;
+}
+.form__input {
+    padding: 10px;
+    border: 2px solid #c2c2c2;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+}
+.form__block {
+    display: flex;
+    gap: 10px;
+}
+.form__box {
+    display: flex;
+    gap: 10px;
+}
+.form__box .form__label {
+    width: 50%;
+}
+.form__box .form__label .form__input {
+    width: 100%;
+}
+.form__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.from__input_radio {
+    display: none;
+}
+.form__label_gender {
+    padding: 10px 20px;
+    border: 2px solid #301942;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #301942;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.from__input_radio:checked + .form__label_gender {
+  background-color: #301942;
+  color: #fff;
+}
+.form__btn {
+    font-size: 20px;
+    background-color: #301942;
+    border: 2px solid #301942;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.form__btn:hover {
+    color: #301942;
+    background-color: transparent;
+}
+.form__text {
+    font-size: 18px;
+    color: #0c092a;
+}
+.form__span {
+    font-size: 20px;
+    color: #600083;
+    cursor: pointer;
+}
+.form_left {
+    animation: 1s slide1 both;
+}
+.info_right {
+    animation: 1s slide2 both;
+    z-index: 3;
+}
