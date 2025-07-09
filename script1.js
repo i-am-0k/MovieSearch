@@ -78,21 +78,8 @@ userBtn.addEventListener('click', () => {
             });
         }
     dialog.showModal()
-    const deleteUserBtn = document.querySelector('#deleteUserBtn'),
-        logOutBtn = document.querySelector('#logOutBtn')
+    const logOutBtn = document.querySelector('#logOutBtn')
 
-    // deleteUserBtn.addEventListener("click", () => {
-    //     let id = newUser.id
-    //     console.log(id)
-    //     fetch(`https://moviesearch-666-default-rtdb.firebaseio.com/users/${id}`, {
-    //             mode: 'no-cors',
-    //             method: 'DELETE',
-    //             // headers: {
-    //             //     "Content-type": "application/json"
-    //             // },
-    //             // body: JSON.stringify(id)
-    //         })
-    // })
     logOutBtn.addEventListener("click", () => {
         localStorage.clear()
         window.location.href = 'index.html'
