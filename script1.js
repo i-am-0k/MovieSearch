@@ -67,7 +67,6 @@ userBtn.addEventListener('click', () => {
         <img class="account__img" src="./images/logout.svg" alt="log out">
         <button class="btn-del">Log out</button>
         </div>
-        <button class="btn-del" id="deleteUserBtn">Delete User</button>
         `
         const modalCont = document.querySelector('.modal__cont')
         if (newUser.genre.length === 0) {
