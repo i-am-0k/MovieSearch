@@ -269,7 +269,6 @@ async function fetchRandomMovieFromFavoriteGenres() {
     const favoriteGenres = newUser.genre;
 
     if (!favoriteGenres || favoriteGenres.length === 0) {
-        console.log("Don't you have any favorite genres yet :");
         return [];
     }
 
