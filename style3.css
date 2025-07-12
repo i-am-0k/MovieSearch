@@ -88,17 +88,6 @@
 .modal__label:nth-last-child(2):hover {
     background-color: transparent;
 }
-#deleteUserBtn {
-    background-color: transparent;
-    color: #d14c4c;
-    padding: 0 10px;
-    align-self: flex-end;
-    transition: all 0.3s;
-}
-#deleteUserBtn:hover {
-    color: #b12828;
-    background-color: transparent;
-}
 .main {
     width: 100%;
     display: flex;
