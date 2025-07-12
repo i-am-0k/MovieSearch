@@ -58,6 +58,8 @@ formReg.addEventListener('submit', (event) => {
                 body: JSON.stringify(newUser)
             })
             .then(() => {
+                formLog.login.value = formReg.login.value
+                formLog.password.value = formReg.password.value
                 formLog.classList.add('active')
                 formReg.classList.remove('active')
                 
@@ -73,8 +75,6 @@ formReg.addEventListener('submit', (event) => {
             .catch(() => console.log('Error'))
         }
     });
-    formLog.login.value = formReg.login.value
-    formLog.password.value = formReg.password.value
 })
 
 async function checkUserData(loginOrEmail, password, callback) {
