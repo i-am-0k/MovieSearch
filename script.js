@@ -57,10 +57,23 @@ formReg.addEventListener('submit', (event) => {
                 },
                 body: JSON.stringify(newUser)
             })
-            .then(() => formReg.reset())
+            .then(() => {
+                formLog.classList.add('active')
+                formReg.classList.remove('active')
+                
+                signForm.classList.add('start-left')
+                info.classList.add('start-right')
+                signForm.classList.remove('left-start')
+                info.classList.remove('right-start')
+                setTimeout(() => {
+                    infoTitle.textContent = 'Log in to your Account'
+                    formReg.reset()
+                }, 300)
+            })
             .catch(() => console.log('Error'))
         }
     });
+    
 })
 
 async function checkUserData(loginOrEmail, password, callback) {
