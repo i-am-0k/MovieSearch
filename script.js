@@ -73,7 +73,8 @@ formReg.addEventListener('submit', (event) => {
             .catch(() => console.log('Error'))
         }
     });
-    
+    formLog.login.value = formReg.login.value
+    formLog.password.value = formReg.password.value
 })
 
 async function checkUserData(loginOrEmail, password, callback) {
