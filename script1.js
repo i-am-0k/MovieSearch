@@ -64,8 +64,8 @@ userBtn.addEventListener('click', () => {
         <div class="modal__cont">
         </div>
         <div class="modal__label" id="logOutBtn">
-        <img class="account__img" src="./images/logout.svg" alt="log out">
-        <button class="btn-del">Log out</button>
+            <img class="account__img" src="./images/logout.svg" alt="log out">
+            <button class="btn-del">Log out</button>
         </div>
         `
         const modalCont = document.querySelector('.modal__cont')
@@ -103,6 +103,8 @@ async function saveUserGenres(userId, genres) {
             }
         });
         userInfo()
+        recomBox.innerHTML = ''
+        displayMovies()
     } catch (error) {
         console.error('Error updating genres', error);
     }
@@ -267,7 +269,7 @@ async function fetchRandomMovieFromFavoriteGenres() {
     const favoriteGenres = newUser.genre;
 
     if (!favoriteGenres || favoriteGenres.length === 0) {
-        console.log('У пользователя нет любимых жанров, лента не будет показана.');
+        console.log("Don't you have any favorite genres yet :");
         return [];
     }
 
@@ -312,7 +314,6 @@ async function displayMovies() {
                 </div>
             `;
         });
-
         const btnAll = document.querySelectorAll('.btn-det');
         btnAll.forEach(btn => {
             btn.addEventListener('click', async (event) => {
@@ -327,3 +328,7 @@ async function displayMovies() {
 }
 
 displayMovies()
+
+document.querySelector('.logo').addEventListener('click', () => {
+    window.location.reload()
+})
